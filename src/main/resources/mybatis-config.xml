@@ -2,8 +2,13 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
+    <settings>
+        <!--   자동 카멜케이스 스네이크 케이스 변환 설정     -->
+        <setting name="mapUnderscoreToCamelCase" value="true" />
+    </settings>
+
     <typeAliases>
-        <typeAlias type="com.codingrecipe.board.dto.BoardDTO" alias="board"></typeAlias>
-        <typeAlias type="com.codingrecipe.board.dto.BoardFileDTO" alias="boardFile"></typeAlias>
+        <typeAlias type="com.example.board.dto.BoardDTO" alias="board"></typeAlias>
     </typeAliases>
 </configuration>
