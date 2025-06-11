@@ -4,6 +4,8 @@
 3. Amazon Corretto 17
 4. MariaDB
 5. Spring Data JPA
+6. thymeleaf
+7. mybatis framework
 
 
 # 게시판 주요기능 
