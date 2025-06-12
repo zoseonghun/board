@@ -1,6 +1,7 @@
 package com.example.board.repository;
 
 import com.example.board.dto.BoardDTO;
+import com.example.board.dto.BoardFileDTO;
 import lombok.RequiredArgsConstructor;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
@@ -14,8 +15,9 @@ public class BoardRepository {
 
     private final SqlSessionTemplate sql;
 
-    public void save(BoardDTO boardDTO) {
+    public BoardDTO save(BoardDTO boardDTO) {
         sql.insert("board.save", boardDTO);
+        return boardDTO;
     }
 
     public List<BoardDTO> findAll() {
@@ -36,5 +38,9 @@ public class BoardRepository {
 
     public void delete(Long id) {
         sql.delete("board.delete", id);
+    }
+
+    public void saveFile(BoardFileDTO boardFileDTO) {
+        sql.insert("board.saveFile", boardFileDTO);
     }
 }
