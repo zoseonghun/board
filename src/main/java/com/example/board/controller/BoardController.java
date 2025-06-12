@@ -26,7 +26,7 @@ public class BoardController {
     public String save(BoardDTO boardDTO) {
 //        System.out.println("BoardDTO = " + boardDTO);
         boardService.save(boardDTO);
-        return "redirect/list";
+        return "redirect:/list";
     }
 
     @GetMapping("/list")
@@ -61,6 +61,12 @@ public class BoardController {
         BoardDTO dto = boardService.findById(boardDTO.getId());
         model.addAttribute("board", dto);
         return "detail";
+    }
+
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable("id") Long id) {
+        boardService.delete(id);
+        return "redirect:/list";
     }
 
 }

@@ -33,4 +33,8 @@ public class BoardRepository {
     public void update(BoardDTO boardDTO) {
         sql.update("board.update", boardDTO);
     }
+
+    public void delete(Long id) {
+        sql.delete("board.delete", id);
+    }
 }
