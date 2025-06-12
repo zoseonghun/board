@@ -28,7 +28,7 @@ public class BoardDTO {
 
     private int fileAttached;
 
-    private MultipartFile boardFile;
+    private List<MultipartFile> boardFile;
 
 
 }
