@@ -12,25 +12,25 @@ import java.util.List;
 
 public class BoardRepository {
 
-    private final SqlSessionTemplate sqlSessionTemplate;
+    private final SqlSessionTemplate sql;
 
     public void save(BoardDTO boardDTO) {
-        sqlSessionTemplate.insert("board.save", boardDTO);
+        sql.insert("board.save", boardDTO);
     }
 
     public List<BoardDTO> findAll() {
-        return  sqlSessionTemplate.selectList("board.findAll");
+        return  sql.selectList("board.findAll");
     }
 
     public void updateHits(Long id) {
-        sqlSessionTemplate.update("board.updateHits", id);
+        sql.update("board.updateHits", id);
     }
 
     public BoardDTO findById(Long id) {
-        return sqlSessionTemplate.selectOne("board.findById", id);
+        return sql.selectOne("board.findById", id);
     }
 
     public void update(BoardDTO boardDTO) {
-        sqlSessionTemplate.update("board.update", boardDTO);
+        sql.update("board.update", boardDTO);
     }
 }
