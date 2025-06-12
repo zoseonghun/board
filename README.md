@@ -66,6 +66,6 @@ constraint FKcfxqly70ddd02xbou0jxgh4o3
 
 ## MariaDB DataBase 계정 생성 및 권한 부여 
 ```
-
+create database board
 ```
 
